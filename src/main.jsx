@@ -1,9 +1,8 @@
-
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import {
-  createBrowserRouter,
+  createHashRouter, // ⬅️ change here
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -15,9 +14,9 @@ import Github, { GithubInfoLoader } from "./components/Github/Github.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import User from "./components/User/User.jsx";
 
-const router = createBrowserRouter(
+const router = createHashRouter( // ⬅️ and here
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/reactRouter" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about/" element={<About />} />
       <Route
@@ -27,14 +26,11 @@ const router = createBrowserRouter(
       <Route path="user/" element={<User />}>
         <Route path=":userid" element={<User />} />
       </Route>
-
       <Route path="*" element={<div>Not Found</div>} />
     </Route>
   )
 );
 
 createRoot(document.getElementById("root")).render(
-  
-    <RouterProvider router={router} />
-  
+  <RouterProvider router={router} />
 );
