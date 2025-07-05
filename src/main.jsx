@@ -16,8 +16,8 @@ import User from "./components/User/User.jsx";
 
 const router = createHashRouter( // ⬅️ and here
   createRoutesFromElements(
-    <Route path="/reactRouter" element={<Layout />}>
-      <Route path="" element={<Home />} />
+    <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Home />} />
       <Route path="about/" element={<About />} />
       <Route
         loader={GithubInfoLoader}
