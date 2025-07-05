@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://SoumyadeepPal128.github.io/reactRouter",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "predeploy": "npm run build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "homepage": "https://SoumyadeepPal128.github.io/reactRouter"
+    "deploy": "gh-pages -d dist"
+    
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
